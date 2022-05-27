@@ -35,5 +35,5 @@ In order to build and execute the module, these are the steps to be made:
 1. `git pull` this repo on your local machine
 2. Run `npm install` inside the directory to install the dependencies
 3. *Optional: edit config.json to customize the execution*
-4. Run `nodemon ./docxToHTML.js` to start the server
-5. Run `node ./sendDocx.js` to test the conversion module
+4. Run `nodemon ./server.js` to start the server
+5. Run `node ./test.js` to test the conversion module
