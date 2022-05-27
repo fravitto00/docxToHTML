@@ -1,13 +1,7 @@
-var config = require('./config.json');
-const express = require('express'),
-      cors = require('cors');
-const app = express();
+const express = require('express');
+var router = express.Router();
 
-app.use(cors());
-app.use(express.json());
-const port = config.server.port; // Listening port
-
-app.post('/' + config.server.endpoint, (req, res) => {
+router.post('/', (req, res) => {
     const mammoth = require("mammoth");
 
     var docx = req.body.docx.data; // Node Buffer containing .docx data
@@ -31,7 +25,5 @@ app.post('/' + config.server.endpoint, (req, res) => {
     .done();
 });
 
-// Endpoint listening on configured port 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+// Exports inner router for adding route on ./router.js
+exports.router = router;
