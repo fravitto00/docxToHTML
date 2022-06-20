@@ -13,6 +13,8 @@ app.use('/', router); // Router is defined inside router.js
 const port = config.server.port; // Listening port
 
 // Endpoint listening on configured port 
-var server = app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Server listening on port ${server.address().port}`)
 })
+
+module.exports = server;

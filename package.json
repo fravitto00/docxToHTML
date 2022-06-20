@@ -4,7 +4,9 @@
   "description": "",
   "main": "sendDocx.js",
   "scripts": {
-    "test": "node sendDockx.js"
+    "server": "node server.js",
+    "start": "node test.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +16,9 @@
     "express": "^4.18.1",
     "mammoth": "^1.4.21",
     "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "supertest": "^6.2.3"
   }
 }

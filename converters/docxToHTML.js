@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.post('/', (req, res) => {
     const mammoth = require("mammoth");
-
+    
     var docx = req.body.docx.data; // Node Buffer containing .docx data
     // Custom Styling Map
     var options = {styleMap: 
