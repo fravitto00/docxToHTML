@@ -7,7 +7,7 @@ const express = require('express'),
 const app = express();
 
 app.use(cors()); // Enable Access-Control-Allow-Origin
-app.use(express.json()); // Enable JSON body parsing
+app.use(express.json({limit: '50mb'})); // Enable JSON body parsing
 app.use('/', router); // Router is defined inside router.js
 
 const port = config.server.port; // Listening port
